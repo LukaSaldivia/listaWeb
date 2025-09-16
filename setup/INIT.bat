@@ -26,8 +26,8 @@ echo ===========================
 echo  SETUP COMPLETADO
 echo  Proximo paso:
 echo  1) Generar PAT en GitHub
-echo  2) La primera vez que hagas git push, usar:
+echo  2) La primera vez que ejecutes CLICK.bat, usar:
 echo     - Username: TU_USUARIO
-echo     - Password: EL PAT
+echo     - Password: token PAT generado
 echo ===========================
 pause
