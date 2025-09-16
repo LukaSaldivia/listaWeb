@@ -15,6 +15,7 @@ current_group = ''
 current_product = ''
 precio = None
 
+print(f"rtf_to_json.py: Procesando archivo {input_file}")
 with open(input_file, 'r') as infile:
     for line in infile:
         # POS X 1860 -> grupo de venta
@@ -39,6 +40,7 @@ with open(input_file, 'r') as infile:
                 data['grupos'][current_group][current_product] = precio
                 precio = None
 
+print(f"rtf_to_json.py: Procesando archivo {changes_file}")
 with open(changes_file, 'r') as infile:
     for line in infile:
         # POS X 735 -> grupo de venta
@@ -66,6 +68,7 @@ with open(changes_file, 'r') as infile:
 
 
 
+print(f"rtf_to_json.py: Guardando archivo {output_file_json}")
 # Guardar en JSON
 with open(output_file_json, 'w', encoding='utf-8') as outfile_json:
     json.dump(data, outfile_json, indent=4, ensure_ascii=False)
